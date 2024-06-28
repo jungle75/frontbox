@@ -1,0 +1,17 @@
+@charset "utf-8";
+@use '_mixin';
+
+.introWrap {width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5rem;
+  .introTitle {display: flex; flex-direction: column; align-items: center; gap: 1rem;
+    h1 {@include mixin.font(2rem,700,var(--black),100%);}
+    .logo {width: 200px;}
+    p {text-align: center; color: var(--gray-600); line-height: 120%;}
+  }
+  .intLink {width: 1200px; @include mixin.flex(center, flex-start, 2rem);
+    .itemBox {flex: 1; display: flex; flex-direction: column; align-items: center; gap: 1rem; border: 1px solid var(--gray-300); border-radius: 0.5rem; padding: 2rem;
+      h2 {@include mixin.font(1.5rem,500,var(--black),100%);}
+      i {width: 2rem; font-size: 2rem; color: var(--primary);}
+    } 
+  }
+  .footer {text-align: center; @include mixin.font(0.875rem,400,var(--gray-400),100%);}
+}
